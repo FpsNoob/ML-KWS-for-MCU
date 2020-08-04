@@ -302,13 +302,6 @@ def main(_):
   tf.logging.info('Confusion Matrix:\n %s' % (total_conf_matrix))
   tf.logging.info('Final test accuracy = %.2f%% (N=%d)' % (total_accuracy * 100,
                                                            set_size))
-  f = open(FLAGS.summaries_dir+'/test/.txt','a')
-  f.write(FLAGS.model_architecture)
-  f.write('\n')
-  f.write(total_conf_matrix)
-  f.write('\n')
-  f.write(total_accuracy)
-
 
 
 if __name__ == '__main__':
